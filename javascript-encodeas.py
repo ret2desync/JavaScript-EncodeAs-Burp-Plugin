@@ -3,9 +3,8 @@ import sys
 import string
 from burp import IBurpExtender, IContextMenuFactory
 from java.util import ArrayList
-from javax.swing import JMenuItem, JDialog, JScrollPane,JPanel, JEditorPane
-from javax.swing.border import EmptyBorder
-from java.awt import BorderLayout
+from javax.swing import JMenuItem
+
 
 class BurpExtender(IBurpExtender, IContextMenuFactory):
 
