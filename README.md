@@ -1,5 +1,6 @@
 # JavaScript-EncodeAs-Burp-Plugin
-Version 1.0
+Version 1.0.
+
 The JavaScript EncodeAs Burp Plugin allows you to encode strings in the JavaScript format (i.e. Unicode/Hex), similar to Burp's Convert-To but specifically for within JSON/JavaScript.
 
 Can be useful for bypassing WAF's/web application validation, particularly if the value is later returned as is and read by JavaScript in the browser.
@@ -56,7 +57,7 @@ Encoding Choices:
 * Hex Encode All Characters (\\x61)
 
    Hex Encodes All Characters for example:
-   
+
    `<script>alert(1)</script> -> \x3C\x73\x63\x72\x69\x70\x74\x3E\x61\x6C\x65\x72\x74\x28\x31\x29\x3C\x2F\x73\x63\x72\x69\x70\x74\x3E`
 
 ## Feedback
