@@ -60,7 +60,7 @@ Encoding Choices:
 
    `<script>alert(1)</script> -> \x3C\x73\x63\x72\x69\x70\x74\x3E\x61\x6C\x65\x72\x74\x28\x31\x29\x3C\x2F\x73\x63\x72\x69\x70\x74\x3E`
 ## Demo
-[Demo.gif](https://raw.githubusercontent.com/ret2desync/JavaScript-EncodeAs-Burp-Plugin/main/demo/burp-plugin-demo.gif)
+![Demo](https://raw.githubusercontent.com/ret2desync/JavaScript-EncodeAs-Burp-Plugin/main/demo/burp-plugin-demo.gif)
 ## Feedback
 If you have any feedback or suggestions, feel free to open an issue on this Github repository.
 
