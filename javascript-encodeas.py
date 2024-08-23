@@ -17,9 +17,9 @@ class BurpExtender(IBurpExtender, IContextMenuFactory):
         callbacks.setExtensionName("JavaScript EncodeAs")
         callbacks.registerContextMenuFactory(self)
         print("JavaScript EncodeAs - v1.0")
-        print("by Jayden Caelli")
+        print("by Jayden Caelli (@ret2desync)")
         print("")
-        print("The documentation can be found at https://github.com/e1abrador/Burp-Encode-IP/blob/main/README.md")
+        print("The documentation can be found at https://github.com/ret2desync/JavaScript-EncodeAs-Burp-Plugin")
 
     def createMenuItems(self, invocation):
         self.context = invocation
