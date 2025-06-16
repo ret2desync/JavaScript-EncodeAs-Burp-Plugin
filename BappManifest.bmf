@@ -1,0 +1,13 @@
+Uuid: 1da8a127327d42eabff3725efe93db86
+ExtensionType: 2
+Name: JavaScript Encode As
+RepoName: javascript-encode-as
+ScreenVersion: 1.0
+SerialVersion: 1
+MinPlatformVersion: 0
+ProOnly: False
+Author: ret2desync
+ShortDescription: Allows you to encode strings in the JavaScript format (i.e. Unicode/Hex), specifically for within JSON/JavaScript.
+EntryPoint: javascript-encodeas.py
+BuildCommand: 
+SupportedProducts: Pro, Community

@@ -1,0 +1,57 @@
+<p>This extension allows you to encode strings in the JavaScript format (i.e. Unicode/Hex), similar to Burp's Convert-To but specifically for within JSON/JavaScript.</p>
+
+<p>This can be useful for bypassing WAF's/web application validation, particularly if the value is later returned as is and read by JavaScript in the browser.</p>
+
+<p>Three types of encoding are supported:</p>
+
+<ul>
+	<li>Unicode (\uHHHH)</li>
+	<li>Unicode Aware (\u{H-HHHHHH})</li>
+	<li>Hex (\xHH)</li>
+</ul>
+
+<h2>Usage</h2>
+
+<p>You can use this extension in places where you can modify text. For example, Repeater, Intruder.</p>
+
+<p>To use this extension, you can "Right-click -&gt; Extensions -&gt; JavaScript EncodeAs -&gt; (Select encoding choice)".</p>
+
+<p>Text should be encoded in JavaScript-friendly format.</p>
+
+<h2>Encoding choices</h2>
+
+<p>Unicode:</p>
+<ul>
+	<li>Unicode Encode Non-Alpha (\u0061abcd)<br>
+		Unicode Encodes Non-Alpha Characters, for example:<br>
+		<code>&lt;script&gt;alert(1)&lt;/script&gt; -&gt; \u003Cscript\u003Ealert\u00281\u0029\u003C\u002Fscript\u003E</code>
+	</li>
+	<li>Unicode Encode All Characters (\u0061)<br>
+		Unicode Encodes All Characters, for example:<br>
+		<code>&lt;script&gt;alert(1)&lt;/script&gt; -&gt; \u003C\u0073\u0063\u0072\u0069\u0070\u0074\u003E\u0061\u006C\u0065\u0072\u0074\u0028\u0031\u0029\u003C\u002F\u0073\u0063\u0072\u0069\u0070\u0074\u003E</code>
+	</li>
+</ul>
+
+<p>Unicode aware:</p>
+<ul>
+	<li>Unicode Aware Encode Non-Alpha (\u{61}abcd)<br>
+		Unicode Aware Encodes Non-Alpha Characters, for example:<br>
+		<code>&lt;script&gt;alert(1)&lt;/script&gt; -&gt; \u{3c}script\u{3e}alert\u{28}1\u{29}\u{3c}\u{2f}script\u{3e}</code>
+	</li>
+	<li>Unicode Aware Encode All Characters (\u{61})<br>
+		Unicode Aware Encodes All Characters, for example:<br>
+		<code>&lt;script&gt;alert(1)&lt;/script&gt; -&gt; \u{3c}\u{73}\u{63}\u{72}\u{69}\u{70}\u{74}\u{3e}\u{61}\u{6c}\u{65}\u{72}\u{74}\u{28}\u{31}\u{29}\u{3c}\u{2f}\u{73}\u{63}\u{72}\u{69}\u{70}\u{74}\u{3e}</code>
+	</li>
+</ul>
+
+<p>Hex:</p>
+<ul>
+	<li>Hex Encode Non-Alpha (\x61abcd)<br>
+		Hex Encodes Non-Alpha Characters for example:<br>
+		<code>&lt;script&gt;alert(1)&lt;/script&gt; -&gt; \x3Cscript\x3Ealert\x281\x29\x3C\x2Fscript\x3E</code>
+	</li>
+	<li>Hex Encode All Characters (\x61)<br>
+		Hex Encodes All Characters for example:<br>
+		<code>&lt;script&gt;alert(1)&lt;/script&gt; -&gt; \x3C\x73\x63\x72\x69\x70\x74\x3E\x61\x6C\x65\x72\x74\x28\x31\x29\x3C\x2F\x73\x63\x72\x69\x70\x74\x3E</code>
+	</li>
+</ul>
